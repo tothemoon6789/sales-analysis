@@ -1,0 +1,85 @@
+@import '../../../../../scss/variable.scss';
+@mixin chart($type, $width, $height, $index) {
+  transition: all linear 0.2s;
+  width: $width * 1%;
+  height: $height * 1%;
+  border: 1px $type;
+  border-left: none;
+  position: absolute;
+  z-index: $index;
+}
+
+.goal {
+  height: 100%;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+  .goal-title {
+    text-align: center;
+  }
+  .racing-road {
+    width: 80%;
+    height: 30px;
+    border-bottom: 1px solid;
+    border-right: 2px dashed;
+    margin: 10px auto auto auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .racing-group:nth-child(1) {
+      @include chart(dashed, 100, 90, 1);
+    }
+    .racing-group:nth-child(2) {
+      @include chart(double, 30, 65, 2);
+    }
+    .racing-group:nth-child(3) {
+      @include chart(dotted, 30, 45, 3);
+    }
+    .racing-group:nth-child(4) {
+      @include chart(double, 30, 5, 2);
+      border: 2px solid $primary-color;
+      background-color: $primary-color;
+    }
+  }
+  .racing-content {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    .racing-group {
+      display: flex;
+      .racing-color {
+        width: 10px;
+        height: 10px;
+        border: 1px solid;
+      }
+      .racing-note {
+        margin-left: 5px;
+      }
+    }
+    .racing-group:nth-child(1) {
+      .racing-color {
+        border: 2px dashed;
+      }
+    }
+    .racing-group:nth-child(2) {
+      .racing-color {
+        border: 2px dotted;
+      }
+    }
+    .racing-group:nth-child(3) {
+      .racing-color {
+        border: 2px solid;
+      }
+    }
+    .racing-group:nth-child(4) {
+      .racing-color {
+        border: 2px solid;
+      }
+    }
+  }
+}
+
+@media (max-width:576px) {
+  .goal {
+    min-height: 30vh;
+  }
+}

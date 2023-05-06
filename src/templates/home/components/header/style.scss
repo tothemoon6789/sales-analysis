@@ -1,0 +1,35 @@
+@import "../../../../scss/variable.scss";
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: $shadown-color;
+  .left {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    .logo {
+      border-radius: 50%;
+      overflow: hidden;
+      width: 50px;
+      height: 50px;
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-row: auto auto;
+      box-shadow: $shadown-color;
+      transition: all linear 0.4s;
+      .part {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+      .part:nth-child(2) {
+        background-color: $primary-color;
+      }
+    }
+    .brand {
+      margin-left: 5px;
+    }
+  }
+}

@@ -1,0 +1,91 @@
+// background-color:red;
+.bottom {
+  // min-height: 30vh;
+
+  .bar-chart-name {
+    text-align: center;
+  }
+  .chart {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    position: relative;
+    .bar-chart-name {
+      white-space: nowrap;
+      writing-mode: vertical-lr;
+    }
+    .bar-chart {
+      display: block;
+      .bar {
+        width: 5px;
+        height: 30px;
+
+        // background-color: $primary-color;
+        background-color: red;
+        margin-left: 5px;
+      }
+      .name {
+        height: 40px;
+        margin-left: 10px;
+        margin-top: 3px;
+        writing-mode: vertical-rl;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        transform: skewX(15deg);
+      }
+    }
+    .bar-chart:nth-child(2) {
+      .bar {
+        height: 40px;
+      }
+    }
+    .bar-chart:nth-child(3) {
+      .bar {
+        height: 50px;
+      }
+    }
+    .bar-chart:nth-child(4) {
+      .bar {
+        height: 60px;
+      }
+    }
+    .bar-chart:nth-child(5) {
+      .bar {
+        height: 20px;
+      }
+    }
+    .bar-chart:nth-child(6) {
+      .bar {
+        height: 10px;
+      }
+    }
+    .bar-chart:nth-child(7) {
+      .bar {
+        height: 60px;
+      }
+    }
+    .bar-chart:nth-child(8) {
+      .bar {
+        height: 50px;
+      }
+    }
+    .bar-chart:nth-child(9) {
+      .bar {
+        height: 80px;
+      }
+    }
+  }
+}
+
+// todo: for mobile
+@media (max-width: 576px) {
+  .bottom {
+  }
+}
+// todo: for tablet
+@media (min-width: 576px) {
+  .bottom {
+  }
+}
