@@ -13,9 +13,7 @@
   .main-top {
     grid-area: main-top;
   }
-  .main-middle {
-    grid-area: main-middle;
-  }
+ 
   .main-middle-left {
     grid-area: main-middle-left;
   }
@@ -28,6 +26,12 @@
   .main-bottom-right {
     grid-area: main-bottom-right;
   }
+  .right {
+    grid-area: right;
+  }
+  .footer {
+    grid-area: footer;
+  }
   .main > div {
     display: flex;
     justify-content: center;
@@ -35,12 +39,7 @@
     background: $surface-color;
     backdrop-filter: $surface-blur;
   }
-  .right {
-    grid-area: right;
-  }
-  .footer {
-    grid-area: footer;
-  }
+  
 }
 .mobile-container {
   background: $background-linear;
@@ -52,112 +51,41 @@
 // TODO: FOR MOBILE
 @media (max-width: 576px) {
   .mobile-container {
-    max-height: 100vh;
+    min-height: 100vh;
     overflow: hidden;
     display: grid;
     grid-gap: $grid-gap;
     box-sizing: border-box;
+    grid-template-rows: 1fr 0.5fr 0.6fr 5fr 1fr 1fr 0.5fr 0.5fr;
+    grid-template-columns: 1fr 1fr 1fr 3fr;
     grid-template-areas:
       "header header header header"
       "nav nav nav nav"
       "menu menu menu menu"
       "main-top main-top main-top main-top"
-      "main-middle main-middle main-middle main-middle"
       "main-middle-left main-middle-left main-middle-right main-middle-right"
       "main-bottom-left main-bottom-left main-bottom-right main-bottom-right"
       "right right right right"
       "footer footer footer footer";
-    .header {
-      height: calc(10vh - #{$grid-gap});
-    }
-    .nav {
-      height: calc(5vh - #{$grid-gap});
-    }
-    .menu {
-      height: calc(5vh - #{$grid-gap});
-    }
-    .main-top {
-      height: calc(30vh - #{$grid-gap});
-    }
-    .main-middle {
-      height: calc(20vh - #{$grid-gap});
-    }
-    .main-middle-left {
-      height: calc(10vh - #{$grid-gap});
-    }
-    .main-middle-right {
-      height: calc(10vh - #{$grid-gap});
-    }
-    .main-bottom-left {
-      height: calc(10vh - #{$grid-gap});
-    }
-    .main-bottom-right {
-      height: calc(10vh - #{$grid-gap});
-    }
-    .right {
-      height: calc(5vh - #{$grid-gap});
-    }
-    .footer {
-      height: calc(5vh - #{$grid-gap});
-    }
   }
 }
 
 // TODO: FOR TABLET
 @media (min-width: 576px) {
   .mobile-container {
-    max-height: 100vh;
+    // width: 100%;
+    min-height: 100vh;
     overflow: hidden;
     display: grid;
     grid-gap: $grid-gap;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 0.5fr 5fr 1fr 1fr 0.5fr;
     grid-template-areas:
-      "header header header header header header"
-      "menu nav nav nav nav nav"
-      "menu main-top main-top main-top main-top right"
-      "menu main-middle main-middle main-middle main-middle right"
-      "menu main-middle-left main-middle-left main-middle-right main-middle-right right"
-      "menu main-bottom-left main-bottom-left main-bottom-right main-bottom-right right"
-      "menu footer footer footer footer right";
-  }
-  .header {
-    height: calc(10vh - #{$grid-gap});
-  }
-  .nav {
-    height: calc(5vh - #{$grid-gap});
-  }
-  .menu {
-    height: calc(90vh - #{$grid-gap});
-    min-width: 20vw;
-  }
-  .main-top {
-    height: calc(40vh - #{$grid-gap});
-  }
-  .main-middle {
-    height: calc(20vh - #{$grid-gap});
-  }
-  .main-middle-left {
-    height: calc(10vh - #{$grid-gap});
-  }
-  .main-middle-right {
-    height: calc(10vh - #{$grid-gap});
-  }
-  .main-bottom-left {
-    height: calc(10vh - #{$grid-gap});
-  }
-  .main-bottom-right {
-    height: calc(10vh - #{$grid-gap});
-  }
-  .right {
-    height: calc(80vh - #{$grid-gap});
-  }
-  .footer {
-    height: calc(5vh - #{$grid-gap});
-  }
-}
-@media (min-width:786px) {
-  .mobile-container {
-    .menu {
-      min-width: 20vw;
-    }
+      "header header header header"
+      "menu nav nav nav"
+      "menu main-top main-top right"
+      "menu main-middle-left main-middle-right right"
+      "menu main-bottom-left main-bottom-right right"
+      "menu footer footer right";
   }
 }

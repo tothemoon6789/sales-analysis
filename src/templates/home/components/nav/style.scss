@@ -1,0 +1,27 @@
+@import "../../../../scss/variable.scss";
+.nav-top {
+  // background-color: red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 5px;
+
+  .right-nav {
+   
+  }
+  .icon {
+    // background: $background-image;
+    &:hover {
+      color: $primary-color;
+      cursor: pointer;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .nav {
+  }
+}
+@media (min-width: 576px) {
+  .nav {
+  }
+}

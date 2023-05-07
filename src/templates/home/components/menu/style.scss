@@ -1,0 +1,78 @@
+@import "../../../../scss/variable.scss";
+// DUNG CHUNG CHO 4 phien ban
+.menu {
+    
+  a {
+    &:hover {
+      cursor: pointer;
+      background-color: rgba($color: $primary-color, $alpha: 0.5);
+      color: $on-primary-color;
+    }
+  }
+  .contract {
+    background-color: white;
+    color: black;
+    padding: 2px;
+    border-radius: 2px;
+    margin-right: 5px;
+  }
+}
+@media (max-width: 576px) {
+  .menu {
+    display: flex;
+    align-items: center;
+    ul {
+      height: 100%;
+      // background-color: red;
+    
+    li {
+      list-style: none;
+      border: 1px solid white;
+      height: 100%;
+      display: block;
+      align-items: center;
+      margin-left: 5px;
+      border-radius: 5px;
+      overflow: hidden;
+      a {
+        color: $on-surface-color;
+        text-decoration: none;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 5px;
+      }
+      .active {
+        background-color: $primary-color;
+        color: $on-primary-color;
+        border-radius: 5px;
+      }
+    }
+    li:nth-child(1){
+        margin-left: 0px;
+    }
+  }
+}
+  
+}
+@media (min-width: 576px) {
+  .menu {
+    a {
+      display: block;
+      width: 100%;
+      margin-top: 5px;
+      padding: 10px;
+      text-align: left;
+      text-decoration: none;
+      color: black;
+    }
+    a:nth-child(1) {
+      margin-top: 0;
+    }
+    .active {
+        background-color: $primary-color;
+        color: $on-primary-color;
+      }
+  }
+}
