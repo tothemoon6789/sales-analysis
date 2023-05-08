@@ -1,0 +1,151 @@
+//! template dung de control layout,
+// ! dieu chinh mau sac, font chu.... thanh phan bao quat
+@import '../../scss/variable.scss';
+.user-template {
+    background-color: $background-color;
+    color: rgba($color: $on-surface-color,$alpha: 0.6);
+    .header {
+        grid-area: header;
+    }
+    .menu {
+        grid-area: menu;
+        
+    }
+    .nav-left {
+        gird-area:nav-left;
+    }
+    .nav-center {
+        gird-area:nav-right;
+    }
+    .nav-right {
+        gird-area:nav-right;
+    }
+    .user {
+        grid-area: user;
+    }
+    .main {
+        grid-area: main;
+    }
+    .middle-left {
+        grid-area: middle-left;
+    }
+    .middle-center {
+        grid-area: middle-center;
+    } 
+    .middle-right {
+        grid-area: middle-right;
+    }
+    .bottom-left {
+        grid-area: bottom-left;
+    }
+    .bottom-right {
+        grid-area: bottom-right;
+    }
+}
+.user-template > div {
+    background: $surface-color;
+    border-radius: $border-radius;
+}
+
+
+
+
+@media (min-width:576px) {
+    .user-template {
+        height: 100vh;
+        display: grid;
+        // background-color: yellow;
+        grid-template-areas: 
+            'header header header header'
+            'menu menu menu menu'
+            'nav-left nav-center nav-right user'
+            'main main main user'
+            'middle-left middle-center middle-right user'
+            'bottom-left bottom-left bottom-right bottom-right'
+        ;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 2fr 5fr 2fr 2fr;
+        grid-gap: $grid-gap;
+        .menu {
+            display: flex;
+            ul {
+                display: none;
+            }
+            hr {
+                display: none;
+            }
+            p:last-child {
+                display: none;
+            }
+        }
+
+    }
+
+    
+}
+@media (min-width:876px) {
+    .user-template {
+        height: 100vh;
+        display: grid;
+        grid-template-areas: 
+            'menu header header header header'
+            'menu nav-left nav-center nav-right user'
+            'menu main main main user'
+            'menu middle-left middle-center middle-right user'
+            'menu bottom-left bottom-left bottom-right bottom-right'
+        ;
+        grid-template-columns: 0.7fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1.5fr 5fr 5fr 5fr;
+        grid-gap: $grid-gap;
+        .menu {
+            display: block;
+            ul {
+                display: block;
+            }
+            hr {
+                display: block;
+            }
+            p:last-child {
+                display: block;
+            }
+        }
+    }
+
+    
+}
+@media (max-width:576px) {
+    
+    .user-template {
+        height: 150vh;
+        display: grid;
+        grid-template-areas: 
+        'header'
+        'menu'
+        'nav-left'
+        'nav-center'
+        'nav-right'
+        'user'
+        'main'
+        'middle-left'
+        'middle-center'
+        'middle-right'
+        'bottom-left'
+        'bottom-right'
+        ;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 7fr 7fr 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: $grid-gap;
+        .menu {
+            display: flex;
+            ul {
+                display: none;
+            }
+            hr {
+                display: none;
+            }
+            p:last-child {
+                display: none;
+            }
+        }
+    }
+}

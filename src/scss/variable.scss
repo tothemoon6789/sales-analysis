@@ -3,10 +3,10 @@
 $background-image: url('https://www.thespruce.com/thmb/c3znkzZgMeuvzBy4wH13jVllfUo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/plants-with-big-flowers-4138211-hero-b10becb169064cc4b3c7967adc1b22e1.jpg');
 $background-linear: linear-gradient(to right, rgba(250, 130, 0, 0.5), rgba(255, 255, 255,0.3));
 
-$background-color: #000000;
-$on-background-color:#000000;
-$surface-color: rgba(255,255,255,.2);
-$on-surface-color:#000000;
+$background-color: #000721;
+$on-background-color:#FFFFFF;
+$surface-color: rgba(#FFFFFF,0.05);
+$on-surface-color:rgba(#FFFFFF,0.07);
 $primary-color:#cc3e0f;
 $on-primary-color: #FFFFFF;
 $secondary-color:#0f9dcc;
@@ -23,7 +23,7 @@ $shadown-color: 0 2px 4px 0 rgba(0,0,0,0.19);
 //! global padding
 $box-padding: 12px;
 
-$grid-gap: 5px;
+$grid-gap: 7px;
 $surface-blur: blur(5px);
 
 $border-radius: 5px;

@@ -1,0 +1,27 @@
+@import "../../../../scss/variable.scss";
+.menu {
+    p {
+        padding: 10px;
+        margin-top: 5px;
+    }
+    p:nth-child(1){
+        color: white;
+    }
+    hr {
+        margin: auto;
+        height: 1px;
+        background-color: $on-surface-color;
+        border: none;
+        width: 70%;
+    }
+    ul {
+        li {
+            display: flex;
+            align-items: center;
+            padding: 5px 10px;
+            svg {
+                margin-right: 10px;
+            }
+        }
+    }
+}

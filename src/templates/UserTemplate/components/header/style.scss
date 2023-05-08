@@ -1,0 +1,8 @@
+@import '../../../../scss/variable.scss';
+.wrap-header {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 $box-padding;
+}
