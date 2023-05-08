@@ -1,7 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Header from "./components/header";
-import MainMiddle from "./components/main/main-middle";
-import MainTop from "./components/main/main-top";
+import Revenue from "./pages/revenue";
 import Menu from "./components/menu";
 import Nav from "./components/nav";
 import Right from "./components/right";

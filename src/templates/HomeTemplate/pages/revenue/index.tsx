@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import './style.scss'
-export default function MainTop() {
+export default function Revenue() {
   const [firstWidth, setFirstWidth] = useState("0%")
   const [secondWidth, setSecondWidth] = useState("0%")
   const [thirtWidth, setThirtWidth] = useState("0%")

@@ -1,4 +1,4 @@
-@import '../../../../../scss/variable.scss';
+@import '../../../../scss/variable.scss';
 @mixin chart($type, $width, $height, $index) {
   transition: all linear 0.2s;
   width: $width * 1%;
@@ -15,7 +15,6 @@
 .goal {
   height: 100%;
   margin-top: 10px;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
   .goal-title {
     text-align: center;
   }

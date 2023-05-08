@@ -1,3 +1,4 @@
+@import '../../../../scss/variable.scss';
 // background-color:red;
 .bottom {
   // min-height: 30vh;
@@ -21,8 +22,8 @@
         width: 5px;
         height: 30px;
 
-        // background-color: $primary-color;
-        background-color: red;
+        background-color: $primary-color;
+        // background-color: red;
         margin-left: 5px;
       }
       .name {

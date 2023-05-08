@@ -1,5 +1,5 @@
 import './style.scss';
-export default function MainMiddle() {
+export default function Chart() {
   return (
     <div className="bottom">
       <div className="bar-chart-name">
